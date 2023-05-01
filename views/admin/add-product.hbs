@@ -1,0 +1,45 @@
+<section>
+    <div class="add-container">
+        <h2 class="text-center">Add New Product</h2>
+        <form action="/admin/add-product/" method="post" enctype="multipart/form-data">
+            <div class="product-details">
+
+                <div class="input-box">
+                    <span class="details">Product Name</span>
+                    <input type="text" placeholder="Product Name" name="name">
+                </div>
+                <div class="input-box">
+                    <span class="details">Product ID</span>
+                    <input type="text" placeholder="Product ID" name="id">
+                </div>
+                <div class="input-box">
+                    <span class="details">Category</span>
+                    <input type="text" placeholder="Category" name="category">
+                </div>
+                <div class="input-box">
+                    <span class="details">Price</span>
+                    <input type="number" step="any" placeholder="Price" name="price">
+                </div>
+                <div class="input-box">
+                    <span class="details">In Stock</span>
+                    <input type="number" placeholder="In Stock" name="stock">
+                </div>
+                <div class="input-box">
+                    <span class="details">Current Order</span>
+                    <input type="number" placeholder="Current Order" name="ordered">
+                </div>
+                <div class="input-box">
+                    <span class="details">Date & Time</span>
+                    <input type="datetime-local" name="date">
+                </div>
+                <div class="button">
+                    <input type="submit" name="" value="Add">
+                </div>
+                <div class="button">
+                    <a href="/admin/">Cancel</a>
+                    {{!-- <input type="submit" onclick="/admin/view-products" value="Cancel"> --}}
+                </div>
+            </div>
+        </form>
+    </div>
+</section>

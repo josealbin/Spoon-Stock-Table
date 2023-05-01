@@ -1,0 +1,96 @@
+<section>
+    <div class="wrapper">
+        <div class="header">
+            <div class="search_box">
+                <input type="text" id="search-input" placeholder="Filter Products by Name">
+            </div>
+        </div>
+
+        <div class="table_wrap">
+            <div class="table_header">
+                <ul>
+                    <li>
+                        <div class="item">
+                            <div class="id">
+                                <span>Prod ID</span>
+                            </div>
+                            <div class="name">
+                                <span>Product Name</span>
+                            </div>
+                            <div class="category">
+                                <span>Category</span>
+                            </div>
+                            <div class="price">
+                                <span>Price</span>
+                            </div>
+                            <div class="instock">
+                                <span>Stock</span>
+                            </div>
+                            <div class="order">
+                                <span>Order</span>
+                            </div>
+                            <div class="difference">
+                                <span>Differ</span>
+                            </div>
+                            <div class="status">
+                                <span>Stock Status</span>
+                            </div>
+                            <div class="date">
+                                <span>Updated</span>
+                            </div>
+                            <div class="action">
+                                <span>Action</span>
+                            </div>
+                        </div>
+                    </li>
+                </ul>
+            </div>
+
+            <div class="table_body">
+                {{#each products}}
+                <ul>
+                    <li>
+                        <div class="item">
+                            <div class="id">
+                                <span>{{this.id}}</span>
+                            </div>
+                            <div class="name">
+                                <span>{{this.name}}</span>
+                            </div>
+                            <div class="category">
+                                <span>{{this.category}}</span>
+                            </div>
+                            <div class="price">
+                                <span>{{this.price}}</span>
+                            </div>
+                            <div class="instock">
+                                <span>{{this.stock}}</span>
+                            </div>
+                            <div class="order">
+                                <span>{{this.ordered}}</span>
+                            </div>
+                            <div class="difference">
+                                <span>{{this.difference}}</span>
+                            </div>
+                            <div class="status">
+                                <span class="available">{{this.status}}</span>
+                            </div>
+                            <div class="date">
+                                <span>{{this.date}}</span>
+                            </div>
+                            <div class="action">
+                                <span>
+                                    <a href="/admin/edit-product/{{this._id}}" class="edit-btn">Edit</a>
+                                    <a href="/admin/delete-product/{{this._id}}" class="remove-btn"
+                                        onclick="return confirm('Are you sure to delete {{this.name}} from current stock?')">Delete</a>
+                                </span>
+                            </div>
+                        </div>
+                    </li>
+                </ul>
+                {{/each}}
+            </div>
+        </div>
+
+    </div>
+</section>

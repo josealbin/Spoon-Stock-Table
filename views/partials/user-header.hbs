@@ -1,0 +1,17 @@
+<header>
+    <div class="container">
+        <a href="/" class="logo-header">Stock List</a>
+        <nav>
+            {{!-- <a href="/">Stock List</a> --}}
+            {{!-- <a href="#">Orders</a> --}}
+            <a href="/admin" class="btn">Admin Access</a>
+            <a href="/admin-login">
+            {{#if user}}
+            Welcome {{user.name}}
+            {{else}}
+            Account
+            {{/if}}
+            </a>
+        </nav>
+    </div>
+</header>

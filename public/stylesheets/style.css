@@ -1,0 +1,109 @@
+@import url('https://fonts.googleapis.com/css2?family=Montserrat:wght@100;200;300&display=swap');
+*{
+    margin: 0;
+    padding: 0;
+    outline: 0;
+    box-sizing: border-box;
+    font-family: 'Montserrat', sans-serif;
+}
+body{ display: flex; justify-content:center; align-items: center; background: #eaeaea;}
+.filter{ position: relative; top: 0; left: 0; right: 0; bottom: 0; z-index: 1; opacity: .7; }
+
+/* Header Start*/
+header{ width: 100%; background-color: #29a5d8; padding: 20px; position: absolute; top:0; }
+header .container{ display: flex; justify-content: space-between;}
+.logo-header{ font-weight: bolder; margin-left: 0;}
+header a{ text-decoration: none; font-size: 15px; color: #fafafa; margin-left: 15px; letter-spacing: 1px;}
+header a:hover{ color: #e3e1e3;}
+.btn{ font-size: 15px; font-weight: bold; background:#29a5d8; border: 1px solid #fafafa; border-radius: 4px; width: 120px; padding: 10px; color: #fafafa; margin-right: 20px;}
+.btn:hover{ color: #eaeaea;}
+/* Header End*/
+
+/* Table Starts*/
+.wrapper{ display: table; position: absolute; margin-top: 30px; z-index: 2; top: 50%; left: 50%; transform: translate(-50%, -50%); width: 100%; border-collapse: collapse; border-spacing: 0; border-radius: 12px 12px 0 0; box-shadow: 0 5px 12px rgba(32, 32, 32, .3); overflow: hidden; background: #fafafa; text-align: center;}
+th,td{ padding: 10px 10px; }
+th{ background: #29a5d8; color: #fafafa; letter-spacing: 1px; font-size: 15px; border-right: 1px solid #eaeaea; position: sticky; top: 0;}
+
+/* .wrapper .header{ } */
+.wrapper .search_box{ max-width: 1000px; background:#fafafa; margin: 20px auto;  border-radius: 10px;}
+.wrapper .search_box input{ border: 1px solid #8cb8ca; border-radius: 10px; width: 100%; outline: none;  color: #888888; font-size: 16px; padding: 10px; }
+::placeholder{ color: #888888; }
+.table_wrap{ width: 100%;  margin: 40px auto; table-layout: auto;}
+.table_wrap ul{ list-style: none;}
+.table_wrap ul li .item{ display: flex; align-items: center; font-size: 14px; background-color: #fff; padding: 15px 0x; height: 30px; text-align: center;}
+.table_wrap ul li .item .name { width: 20%; padding: 0 15px;}
+.table_wrap ul li .item .instock, .table_wrap ul li .item .order, .table_wrap ul li .item .difference,.table_wrap ul li .item .price, .table_wrap ul li .item .id, .table_wrap ul li .item .action  { width: 10%; padding: 0 15px;}
+.table_wrap ul li .item .status, .table_wrap ul li .item .category, .table_wrap ul li .item .date{ width: 15%; padding: 0 15px;}
+
+.table_wrap ul li .item .name span, .table_wrap ul li .item .category span { width: 90%; display: inline-block; white-space: nowrap; overflow: hidden; text-overflow: ellipsis;}
+.table_wrap ul li .item .action span, .table_wrap ul li .item .status span  { display: inline-block; white-space: nowrap; }
+.table_wrap ul li .item .id span, .table_wrap ul li .item .date span { width: 90%; display: inline-block; white-space: nowrap; text-overflow: ellipsis;}
+/* .table_wrap ul li .item:nth-child(odd){ background: #e3e1e3;} */
+.table_header ul li .item{ color: #fafafa; background: #29a5d8; font-weight: bold; text-transform: uppercase; text-align: left;}
+.table_wrap .table_header ul li .item span{ border-left: 1px solid #eaeaea; padding: 5px;}
+.table_body{ height: 500px; overflow: auto; }
+.table_body ul li .item{ border-bottom: 1px solid #efefef; text-align: left; }
+.table_body ul li .item .id span{ color: #c57416; font-weight: bold;}
+.table_body ul li .item .status span{ padding: 4px 20px; border-radius: 5px; max-width: 100px; display: inline-block;}
+.table_body ul li .item .available{ background: #e5edfa; color: #5a8ee4;}
+.table_body ul li .item .stockout{ background: #fedfe5; color: #f59d39;}
+
+.edit-btn{ border: 1px solid #3eaf71; background: #3eaf71; color: #fafafa; font-size: 13px;}
+.edit-btn:hover{ color: #eaeaea;}
+.remove-btn{ border: 1px solid #cb4a54; background: #cb4a54; color: #fafafa; font-size: 13px;}
+.remove-btn:hover{ color: #eaeaea;}
+.edit-btn, .remove-btn{ border-radius: 3px; padding: 4px 2px; cursor: pointer; text-decoration: none;}
+/* Table Ends*/
+
+
+/* Login Form Starts*/
+.login-form-container{ position: absolute; top: 50%; left: 50%; transform: translate(-50%, -50%); width: 30%; height: 65%; border-collapse: collapse; border-spacing: 0; border-radius: 12px 12px 0 0; overflow: hidden; box-shadow: 0 5px 12px rgba(32, 32, 32, .3); background: #fafafa;}
+.login-form{ text-align: center; }
+.login-form h2{ font-size: 25px; background: #29a5d8; color: #fafafa; padding: 25px; }
+.login-form p{ font-size: 16px; margin: 20px 0; border: 0; border-radius: 5px;}
+.login-form input{ font-size: 14px; padding: 10px 5px; width: 50%; border: 1px solid #e3e1e3 ; border-radius: 5px;}
+.login-form a{ width: 50%; margin: 40px auto; display: block; text-decoration: none; color: #29a5d8;}
+.login-form button{ padding: 15px 10px; width: 50%; margin: 30px 0; font-size: 18px; font-weight: bold; background: #fafafa; color: #29a5d8; border: 1px solid #e3e1e3 ; border-radius: 5px; }
+.login-form button:hover{ color: #fafafa; background: #29a5d8 ; cursor: pointer;}
+/* Login Form Ends*/
+
+
+/* Signup Form Starts*/
+.signup-form-container{ position: absolute; top: 50%; left: 50%; transform: translate(-50%, -50%); width: 35%; height: 75%; border-collapse: collapse; border-spacing: 0; border-radius: 12px 12px 0 0; overflow: hidden; box-shadow: 0 5px 12px rgba(32, 32, 32, .3); background: #fafafa;}
+.signup-form{ text-align: center; }
+.signup-form h2{ font-size: 25px; background: #29a5d8; color: #fafafa; padding: 25px; }
+.signup-form p{ font-size: 16px; margin: 15px 0; border: 0; border-radius: 5px;}
+.signup-form input{ font-size: 14px; padding: 10px 5px; width: 50%; border: 1px solid #e3e1e3 ; border-radius: 5px;}
+.signup-form a{ width: 50%; margin: 40px auto; display: block; text-decoration: none; color: #29a5d8;}
+.signup-form button{ padding: 15px 10px; width: 50%; margin: 30px 0; font-size: 18px; font-weight: bold; background: #fafafa; color: #29a5d8; border: 1px solid #e3e1e3 ; border-radius: 5px; }
+.signup-form button:hover{ color: #fafafa; background: #29a5d8 ; cursor: pointer;}
+/* Form Ends*/
+
+
+/* Add Product Form Starts*/
+.add-container{ position: absolute; top: 50%; left: 50%; transform: translate(-50%, -50%); width: 55%; height: 75%; border-collapse: collapse; border-spacing: 0; border-radius: 12px 12px 0 0; overflow: hidden; box-shadow: 0 5px 12px rgba(32, 32, 32, .3); background: #fafafa;}
+.add-container h2{ text-align: center; font-size: 20px; background: #29a5d8; color: #fafafa; padding: 15px;}
+.add-container form .product-details { display: flex; flex-wrap: wrap; justify-content: space-between; padding: 20px; margin-top: 20px;}
+/* Form Ends*/
+
+
+/* Update Form Starts*/
+.update-container{ position: absolute; top: 50%; left: 50%; transform: translate(-50%, -50%); width: 55%; height: 75%; border-collapse: collapse; border-spacing: 0; border-radius: 12px 12px 0 0; overflow: hidden; box-shadow: 0 5px 12px rgba(32, 32, 32, .3); background: #fafafa;}
+.update-container h2{ text-align: center; font-size: 20px; background: #29a5d8; color: #fafafa; padding: 20px;}
+.update-container form .product-details { display: flex; flex-wrap: wrap; justify-content: space-between; padding: 20px; margin-top: 20px;}
+.product-details .input-box-product-name{width: 100%; border-radius: 5px;  background: #fff;}
+.product-details .input-box-product-name input{height: 50px; width: 100%; outline: none; border-radius: 5px; border: 1px solid #e3e1e3; padding-left: 15px; font-size: 14px; box-shadow: 0 1px 5px rgba(0,0,0,0.1);}
+.product-details .input-box-product-name input[value^="product.id"]{ color: #cb4a54;}
+/* Update Form Ends*/
+
+
+
+/* Common Styles for both Add & Update Form Starts*/
+.product-details .input-box{ width: calc(100% / 2 - 20px); margin: 20px 5px 12px 5px; }
+.product-details .input-box .details{ font-weight: 500; margin-bottom: 5px; display: block;}
+.product-details .input-box input{ height: 45px; width: 100%; outline: none; border-radius: 5px; border: 1px solid #e3e1e3; padding:0 10px; font-size: 14px;}
+.product-details .button input{ padding: 10px 30px; width: 100%; margin: 40px 0; font-size: 18px; font-weight: bold; background: #fafafa; color: #29a5d8; border: 1px solid #e3e1e3 ; border-radius: 5px;}
+.product-details .button input:hover{ color: #fafafa; background: #29a5d8 ; cursor: pointer;}
+.product-details .button a{ padding: 10px 30px; width: 100%; margin: 40px 0; font-size: 18px; float: right; font-weight: bold; background: #fafafa; color: #29a5d8; border: 1px solid #e3e1e3 ; border-radius: 5px; text-decoration: none;}
+.product-details .button a:hover{ color: #fafafa; background: #29a5d8 ; cursor: pointer;}
+/* Common Styles for both Add & Update Form Ends*/

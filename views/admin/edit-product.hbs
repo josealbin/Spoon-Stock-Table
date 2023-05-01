@@ -1,0 +1,45 @@
+<section>
+    <div class="update-container">
+
+        <h2 class="text-center">Update Stock</h2>
+        <form action="/admin/edit-product/{{product._id}}" method="post" enctype="multipart/form-data">
+            <div class="product-details">
+
+                <div class="input-box-product-name">
+                    <input type="text" name="name" id="search" value="{{product.name}}">
+                </div>
+                <div class="input-box">
+                    <span class="details">Category</span>
+                    <input type="text" name="category" value="{{product.category}}">
+                </div>
+                <div class="input-box">
+                    <span class="details">Price / Unit</span>
+                    <input type="number" step="any" name="price" value="{{product.price}}">
+                </div>
+                <div class="input-box">
+                    <span class="details">In Stock</span>
+                    <input type="number" name="stock" value="{{product.stock}}">
+                </div>
+                <div class="input-box">
+                    <span class="details">Current Order</span>
+                    <input type="number" name="ordered" value="{{product.ordered}}">
+                </div>
+                <div class="input-box">
+                    <span class="details">Stock Status</span>
+                    <input type="text" name="status" value="{{product.status}}">
+                </div>
+                <div class="input-box">
+                    <span class="details">Date & Time</span>
+                    <input type="datetime-local" name="date" value="{{product.date}}">
+                </div>
+                <div class="button">
+                    <input type="submit" value="Update">
+                </div>
+                <div class="button">
+                    {{!-- <input type="submit" onclick="/admin/" value="Cancel"> --}}
+                    <a href="/admin/">Cancel</a>
+                </div>
+            </div>
+        </form>
+    </div>
+</section>
