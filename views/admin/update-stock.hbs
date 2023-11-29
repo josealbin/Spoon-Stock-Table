@@ -1,0 +1,29 @@
+<section>
+     <div id="formContainer" class="hidden">
+    <div class="update-stock">
+        <h2 class="text-center">Update Stock</h2>
+       
+        <form action="/admin/update-stock/{{product._id}}" method="post" enctype="multipart/form-data">
+            <div class="product-details">
+
+                <div class="input-box">
+                    <span class="details"></span>
+                    <input type="number" name="stock" value="{{product.stock}}">
+                    {{!-- <input type="text" id="calculatorInput" oninput="calculateResult()"> --}}
+                </div>
+                <div class="input-box">
+                    <span class="details"></span>
+                    <input type="number" name="ordered" value="{{product.ordered}}">
+                </div>
+                <div class="button">
+                    <a href="/admin/">Cancel</a>
+                </div>
+                <div class="button">
+                    <input type="submit" name="" value="Update">
+                </div>
+            </div>
+        </form>
+        
+    </div>
+    </div>
+</section>

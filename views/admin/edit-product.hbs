@@ -1,6 +1,5 @@
 <section>
     <div class="update-container">
-
         <h2 class="text-center">Update Stock</h2>
         <form action="/admin/edit-product/{{product._id}}" method="post" enctype="multipart/form-data">
             <div class="product-details">
@@ -30,14 +29,14 @@
                 </div>
                 <div class="input-box">
                     <span class="details">Date & Time</span>
-                    <input type="datetime-local" name="date" value="{{product.date}}">
-                </div>
-                <div class="button">
-                    <input type="submit" value="Update">
+                    <input type="datetime-local" id="date" name="date" value="{{product.date}}">
                 </div>
                 <div class="button">
                     {{!-- <input type="submit" onclick="/admin/" value="Cancel"> --}}
                     <a href="/admin/">Cancel</a>
+                </div>
+                <div class="button">
+                    <input type="submit" value="Update">
                 </div>
             </div>
         </form>
